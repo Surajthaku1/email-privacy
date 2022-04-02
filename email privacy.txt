@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string email = "ashish1234323@gmail.com";
+            string user = email.Substring(0, email.IndexOf("@"));
+            string u = user.Substring(0, 3);
+
+            string form = u + repeat("*", user.Length - 3) + email.Substring(email.IndexOf("@"));
+            Console.WriteLine(form);
+                
+
+            Console.ReadLine();
+
+        }
+        public static string repeat(string ch,int count)
+        {
+            string rp = string.Empty;
+            for(int i=0;i<count;i++)
+            {
+                rp += ch;
+            }
+            return rp;
+        }
+    }
+}
